@@ -12,16 +12,16 @@ module.exports = function (doc, { lorem }) {
   };
   for (let i = 0; i < 3; ++i) {
     const header = table.header();
-    header.cell("Header Left " + i, header_props);
-    header.cell("Header Center " + i, header_props);
-    header.cell("Header Right " + i, header_props);
+    header.cell(`Header Left ${i}`, header_props);
+    header.cell(`Header Center ${i}`, header_props);
+    header.cell(`Header Right ${i}`, header_props);
   }
 
   const row_props = { fontSize: 11, padding: 30 };
   for (let i = 0; i < 25; ++i) {
     const row = table.row();
-    row.cell("Cell Left " + i, { ...row_props, backgroundColor: 0xcccccc });
-    row.cell("Cell Center " + i, { ...row_props, backgroundColor: 0xdddddd });
-    row.cell("Cell Right " + i, { ...row_props, backgroundColor: 0xeeeeee });
+    row.cell(`Cell Left ${i}`, { ...row_props, backgroundColor: 0xCCCCCC });
+    row.cell(`Cell Center ${i}`, { ...row_props, backgroundColor: 0xDDDDDD });
+    row.cell(`Cell Right ${i}`, { ...row_props, backgroundColor: 0xEEEEEE });
   }
 };

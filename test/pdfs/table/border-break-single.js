@@ -13,12 +13,12 @@ module.exports = function (doc, { lorem }) {
     textAlign: "justify",
     fontSize: 20,
     padding: 10,
-    backgroundColor: 0xdddddd,
+    backgroundColor: 0xDDDDDD,
   });
   row.cell(lorem.shorter, {
     textAlign: "justify",
     fontSize: 20,
     padding: 10,
-    backgroundColor: 0xeeeeee,
+    backgroundColor: 0xEEEEEE,
   });
 };

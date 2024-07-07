@@ -1,13 +1,13 @@
+const fs = require("node:fs");
+const path = require("node:path");
 const test = require("tape");
-const fs = require("fs");
-const path = require("path");
 const fixtures = require("../fixtures");
 const pdf = require("../../lib");
 
 const f = fixtures.create();
 
-test("asBuffer", function (t) {
-  let doc = new pdf.Document({
+test("asBuffer", (t) => {
+  const doc = new pdf.Document({
     font: f.font.afm.regular,
     padding: 10,
     lineHeight: 1,
@@ -35,7 +35,8 @@ test("asBuffer", function (t) {
         try {
           var result = fs.readFileSync(resultPath, "binary");
           var expectation = fs.readFileSync(expectationPath, "binary");
-        } catch (err) {
+        }
+        catch (err) {
           t.error(err);
         }
 
@@ -46,10 +47,10 @@ test("asBuffer", function (t) {
     .catch(t.error);
 });
 
-test("error in pending queue", async function (t) {
+test("error in pending queue", async (t) => {
   t.plan(1);
 
-  let doc = new pdf.Document({
+  const doc = new pdf.Document({
     font: f.font.afm.regular,
   });
 

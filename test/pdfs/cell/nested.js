@@ -3,9 +3,9 @@ module.exports = function (doc, fixtures) {
   const outer = doc.cell({
     width: 400,
     padding: 20,
-    backgroundColor: 0xeeeeee,
+    backgroundColor: 0xEEEEEE,
   });
-  const inner = outer.cell({ padding: 20, backgroundColor: 0xdddddd });
+  const inner = outer.cell({ padding: 20, backgroundColor: 0xDDDDDD });
   inner.text(fixtures.lorem.short);
   inner.text(fixtures.lorem.short);
   outer.text("Hello World");

@@ -10,12 +10,12 @@ module.exports = function (doc, { lorem }) {
   // should be moved to the next page retrospectively
   const row = table.row();
   row.cell(lorem.short, {
-    backgroundColor: 0xeeeeee,
+    backgroundColor: 0xEEEEEE,
     padding: 10,
     fontSize: 20,
   });
   row.cell(lorem.short, {
-    backgroundColor: 0xbbbbbb,
+    backgroundColor: 0xBBBBBB,
     padding: 10,
     fontSize: 20,
   });

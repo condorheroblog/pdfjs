@@ -6,7 +6,7 @@ module.exports = function (doc, fixtures) {
     .add("Regular", { font: fixtures.font.afm.regular })
     .add("Big", { fontSize: 20 })
     .add("BigBold", { fontSize: 20, font: fixtures.font.afm.bold })
-    .add("Red", { color: 0xff0000 })
+    .add("Red", { color: 0xFF0000 })
     .add("Regular")
     // test changing line heights
     .add("\nRegular")

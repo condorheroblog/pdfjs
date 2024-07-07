@@ -49,7 +49,7 @@ module.exports = function (doc, { lorem, font }) {
     // color change
     const text = doc.text();
     text.add("foo", { strikethrough: true });
-    text.add("bar", { strikethrough: true, color: 0xff0000 });
+    text.add("bar", { strikethrough: true, color: 0xFF0000 });
   }
 
   {

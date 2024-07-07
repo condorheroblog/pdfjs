@@ -49,7 +49,7 @@ module.exports = function (doc, { lorem, font }) {
     // color change
     const text = doc.text();
     text.add("foo", { underline: true });
-    text.add("bar", { underline: true, color: 0xff0000 });
+    text.add("bar", { underline: true, color: 0xFF0000 });
   }
 
   {

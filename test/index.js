@@ -1,21 +1,23 @@
+const path = require("node:path");
+const fs = require("node:fs");
 const glob = require("glob");
-const path = require("path");
-const fs = require("fs");
 const test = require("tape");
-const fixtures = require("./fixtures");
 const pdf = require("../lib");
+const fixtures = require("./fixtures");
 
 process.env.TZ = "Europe/Berlin";
 
 const args = process.argv.slice(2);
 if (args.length) {
   run(
-    args.map((a) => path.join(__dirname, "../", a)),
+    args.map(a => path.join(__dirname, "../", a)),
     true,
   );
-} else {
-  glob(path.join(__dirname, "{pdfs,others}/**/*.js"), function (err, files) {
-    if (err) throw err;
+}
+else {
+  glob(path.join(__dirname, "{pdfs,others}/**/*.js"), (err, files) => {
+    if (err)
+      throw err;
     run(files);
   });
 }
@@ -26,7 +28,8 @@ Date = class extends _Date {
   constructor(year, month, day, hour, minute, second) {
     if (arguments.length === 0) {
       return new _Date(2015, 1, 19, 22, 33, 26);
-    } else {
+    }
+    else {
       return new _Date(year, month, day, hour, minute, second);
     }
   }
@@ -51,11 +54,11 @@ function run(files, force) {
     }
 
     const pdfsPath = path.relative(path.join(__dirname, "pdfs"), dirname);
-    const expectationPath = path.join(dirname, basename + ".pdf");
-    const resultPath = path.join(dirname, basename + ".result.pdf");
+    const expectationPath = path.join(dirname, `${basename}.pdf`);
+    const resultPath = path.join(dirname, `${basename}.result.pdf`);
     const script = require(scriptPath);
 
-    test(path.join(pdfsPath, basename), function (t) {
+    test(path.join(pdfsPath, basename), (t) => {
       let doc = new pdf.Document({
         font: f.font.afm.regular,
         padding: script.padding >= 0 ? script.padding : 10,
@@ -78,7 +81,8 @@ function run(files, force) {
         try {
           var result = fs.readFileSync(resultPath, "binary");
           var expectation = fs.readFileSync(expectationPath, "binary");
-        } catch (err) {
+        }
+        catch (err) {
           t.error(err);
         }
 
@@ -91,7 +95,7 @@ function run(files, force) {
         doc.end().catch((err) => {
           t.error(err);
         });
-      }).catch((err) => t.error(err));
+      }).catch(err => t.error(err));
     });
   }
 }

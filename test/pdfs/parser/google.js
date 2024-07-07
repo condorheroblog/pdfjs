@@ -1,6 +1,6 @@
+const path = require("node:path");
+const fs = require("node:fs");
 const pdf = require("../../../");
-const path = require("path");
-const fs = require("fs");
 
 module.exports = function (doc) {
   const img = new pdf.Image(

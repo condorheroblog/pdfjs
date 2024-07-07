@@ -9,8 +9,8 @@ Add a header to the document. Returns a [Header Object](header.md).
 **Example**:
 
 ```js
-const header = doc.header()
-header.text('This is a header')
+const header = doc.header();
+header.text("This is a header");
 ```
 
 ### .footer()
@@ -20,8 +20,8 @@ Add a footer to the document. Returns a [Footer Object](header.md).
 **Example**:
 
 ```js
-const footer = doc.footer()
-footer.text('This is a footer')
+const footer = doc.footer();
+footer.text("This is a footer");
 ```
 
 ### .addPagesOf(external)
@@ -37,9 +37,9 @@ Add all pages of an external PDF into this document (aka merge an external docum
 **Example:**
 
 ```js
-const src = fs.readFileSync('other.pdf')
-const ext = new pdf.ExternalDocument(src)
-doc.addPagesOf(ext)
+const src = fs.readFileSync("other.pdf");
+const ext = new pdf.ExternalDocument(src);
+doc.addPagesOf(ext);
 ```
 
 ### .addPageOf(page, external)
@@ -56,10 +56,10 @@ Add one specific page of an external PDF into this document (aka merge an extern
 **Example:**
 
 ```js
-const src = fs.readFileSync('other.pdf')
-const ext = new pdf.ExternalDocument(src)
-doc.addPageOf(1, ext)
-doc.addPageOf(3, ext)
+const src = fs.readFileSync("other.pdf");
+const ext = new pdf.ExternalDocument(src);
+doc.addPageOf(1, ext);
+doc.addPageOf(3, ext);
 ```
 
 ### .setTemplate(external, [firstPageOnly])
@@ -76,9 +76,9 @@ Use an external document as a page template (i.e. external PDF will be used as a
 **Example:**
 
 ```js
-const src = fs.readFileSync('other.pdf')
-const ext = new pdf.ExternalDocument(src)
-doc.setTemplate(ext)
+const src = fs.readFileSync("other.pdf");
+const ext = new pdf.ExternalDocument(src);
+doc.setTemplate(ext);
 ```
 
 ### .pipe(stream)

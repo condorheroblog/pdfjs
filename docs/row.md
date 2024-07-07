@@ -21,9 +21,9 @@ Add a cell to the row. Returns a [Fragment object](fragment.md).
 ```js
 const table = doc.table({
   widths: [200, 200]
-})
+});
 
-const row = table.row()
-row.cell('Cell Left')
-row.cell('Cell Right')
+const row = table.row();
+row.cell("Cell Left");
+row.cell("Cell Right");
 ```

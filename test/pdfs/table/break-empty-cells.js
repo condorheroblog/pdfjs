@@ -9,13 +9,13 @@ module.exports = function (doc, { lorem }) {
 
   for (let i = 0; i < 3; ++i) {
     const row = table.row();
-    row.cell("Cell " + i);
+    row.cell(`Cell ${i}`);
     row.cell();
     row.cell();
-    row.cell("Cell " + i);
+    row.cell(`Cell ${i}`);
     row.cell();
-    row.cell("Cell " + i);
-    row.cell("Cell " + i);
+    row.cell(`Cell ${i}`);
+    row.cell(`Cell ${i}`);
   }
 };
 

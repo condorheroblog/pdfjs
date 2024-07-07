@@ -2,7 +2,7 @@ module.exports = function (doc, { lorem, image }) {
   const header = doc.header();
   header.text("text");
 
-  const cell = header.cell({ padding: 20, backgroundColor: 0xdddddd });
+  const cell = header.cell({ padding: 20, backgroundColor: 0xDDDDDD });
   cell.text("TESTING");
   cell.image(image.pdf);
 

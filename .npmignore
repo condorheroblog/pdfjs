@@ -1,9 +1,0 @@
-docs
-font/afm
-test
-logo.svg
-.*
-yarn.lock
-test.*
-/*.pdf
-playground

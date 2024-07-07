@@ -1,5 +1,5 @@
 module.exports = function (doc, fixtures) {
-  for (var i = 0; i < 10; i++) {
+  for (let i = 0; i < 10; i++) {
     const table = doc
       .table({ widths: [null, null], borderWidth: 1, padding: 100 })
       .row();

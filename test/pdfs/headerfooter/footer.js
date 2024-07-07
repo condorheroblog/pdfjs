@@ -2,7 +2,7 @@ module.exports = function (doc, { lorem, image }) {
   const footer = doc.footer();
   footer.text("text");
 
-  const cell = footer.cell({ padding: 20, backgroundColor: 0xdddddd });
+  const cell = footer.cell({ padding: 20, backgroundColor: 0xDDDDDD });
   cell.text("TESTING");
   cell.image(image.pdf);
 

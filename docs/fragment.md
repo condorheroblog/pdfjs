@@ -25,9 +25,9 @@ Add some text to the document. Returns a [Text object](text.md).
 **Example:**
 
 ```js
-doc.text('Lorem Ipsum ...')
-const text = doc.text({ fontSize: 12 })
-text.add('Lorem Ipsum ...')
+doc.text("Lorem Ipsum ...");
+const text = doc.text({ fontSize: 12 });
+text.add("Lorem Ipsum ...");
 ```
 
 ### .cell([text], [opts])
@@ -53,8 +53,8 @@ Add a cell to the document. Returns a [Fragment object](fragment.md).
 **Example:**
 
 ```js
-const cell = doc.cell('Cell Text', { padding: 10 })
-cell.text('More text ...')
+const cell = doc.cell("Cell Text", { padding: 10 });
+cell.text("More text ...");
 ```
 
 ### .table([opts])
@@ -86,11 +86,11 @@ Add a table to the document. Returns a [Table object](table.md).
 const table = doc.table({
   widths: [256, 256],
   borderHorizontalWidth: 10
-})
+});
 
-const row = table.row()
-row.cell('Cell 1')
-row.cell('Cell 2')
+const row = table.row();
+row.cell("Cell 1");
+row.cell("Cell 2");
 ```
 
 ### .image(img, [opts])
@@ -119,10 +119,11 @@ Supported formats: JPEGs, other PDFs
 **Example:**
 
 ```js
-const img = new pdf.Image(fs.readFileSync('image.jpg'))
+const img = new pdf.Image(fs.readFileSync("image.jpg"));
 doc.image(img, {
-  height: 55, align: 'center'
-})
+  height: 55,
+  align: "center"
+});
 ```
 
 ### .pageBreak()
@@ -136,12 +137,12 @@ Execute PDF operations manually
 **Example:**
 
 ```js
-doc.op(1, 0, 0, 'sc')
+doc.op(1, 0, 0, "sc");
 doc.op((x, y) => {
-  const height = 40
-  return [x, y - height, x + 60, height, 're']
-})
-doc.op('f')
+  const height = 40;
+  return [x, y - height, x + 60, height, "re"];
+});
+doc.op("f");
 ```
 
 ### .destination(name)
@@ -151,9 +152,9 @@ Add a named destination to the document and the current position.
 **Example:**
 
 ```js
-doc.text('goto', { goTo: 'here' })
-doc.pageBreak()
-doc.destination('here')
+doc.text("goto", { goTo: "here" });
+doc.pageBreak();
+doc.destination("here");
 ```
 
 ### .outline(title, destination, [parent])
@@ -169,10 +170,10 @@ Add an entry to the documents outline.
 **Example:**
 
 ```js
-doc.text('1. Section', { destination: '1' })
-doc.pageBreak()
-doc.text('1.1. Subsection', { destination: '1.1' })
+doc.text("1. Section", { destination: "1" });
+doc.pageBreak();
+doc.text("1.1. Subsection", { destination: "1.1" });
 
-doc.outline('Section', '1')
-doc.outline('Subsection', '1.1', 'Section')
+doc.outline("Section", "1");
+doc.outline("Subsection", "1.1", "Section");
 ```

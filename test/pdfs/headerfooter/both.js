@@ -3,7 +3,7 @@ module.exports = function (doc, { lorem, image }) {
   const header = doc.header();
   header.text("text");
 
-  let cell = header.cell({ padding: 20, backgroundColor: 0xdddddd });
+  let cell = header.cell({ padding: 20, backgroundColor: 0xDDDDDD });
   cell.text("TESTING");
   cell.image(image.pdf);
 
@@ -11,7 +11,7 @@ module.exports = function (doc, { lorem, image }) {
   const footer = doc.footer();
   footer.text("text");
 
-  cell = footer.cell({ padding: 20, backgroundColor: 0xdddddd });
+  cell = footer.cell({ padding: 20, backgroundColor: 0xDDDDDD });
   cell.image(image.complexPdf);
   cell.text("TESTING");
 

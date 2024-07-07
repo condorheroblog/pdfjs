@@ -1,6 +1,6 @@
 module.exports = function (doc, { lorem }) {
   const cell = doc.cell({
-    backgroundColor: 0xeeeeee,
+    backgroundColor: 0xEEEEEE,
     width: 250,
     padding: 10,
   });

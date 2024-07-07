@@ -5,7 +5,7 @@ module.exports = function (doc, { lorem }) {
 
   // should be moved to the next page retrospectively
   doc.cell(lorem.short, {
-    backgroundColor: 0xeeeeee,
+    backgroundColor: 0xEEEEEE,
     padding: 30,
     fontSize: 20,
   });

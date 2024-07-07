@@ -6,7 +6,7 @@ const cm = 0.0393700787 * 72 * 10;
 module.exports = function (doc, { image }) {
   const table = doc.table({
     widths: [null, null],
-    borderHorizontalWidths: function (i) {
+    borderHorizontalWidths(i) {
       return i < 2 ? 1 : 0.1;
     },
     padding: 5,

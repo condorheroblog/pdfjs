@@ -15,7 +15,7 @@ module.exports = function (doc) {
     width: 256,
     padding: 10,
     borderRightWidth: 1,
-    borderRightColor: 0x2980b9,
+    borderRightColor: 0x2980B9,
   });
 
   doc.text("after");

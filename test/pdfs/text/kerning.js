@@ -5,7 +5,7 @@ module.exports = function (doc, { lorem, font }) {
   // alignment
   doc.text("AVA\n_ V _", { textAlign: "center" });
   doc.text("AVA\n_ A", { textAlign: "right" });
-  doc.text("AVA " + lorem.short, { textAlign: "justify" });
+  doc.text(`AVA ${lorem.short}`, { textAlign: "justify" });
 
   // break long
   doc.text(
@@ -22,7 +22,7 @@ module.exports = function (doc, { lorem, font }) {
   // alignment
   doc.text("AVA\n_ V _", { textAlign: "center", font: font.opensans.regular });
   doc.text("AVA\n_ A", { textAlign: "right", font: font.opensans.regular });
-  doc.text("AVA " + lorem.short, {
+  doc.text(`AVA ${lorem.short}`, {
     textAlign: "justify",
     font: font.opensans.regular,
   });

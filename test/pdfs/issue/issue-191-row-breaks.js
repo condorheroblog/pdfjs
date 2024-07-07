@@ -4,29 +4,29 @@ module.exports = function (doc) {
   const table = doc.table({
     widths: [100, null],
     borderWidth: 1,
-    borderColor: 0xf00f00,
+    borderColor: 0xF00F00,
   });
   const row = table.row();
 
-  row.cell(`heading`, {
+  row.cell("heading", {
     padding: 12,
   });
 
   const cell = row.cell();
 
-  cell.cell(`value - 1`, {
+  cell.cell("value - 1", {
     padding: 12,
   });
 
-  cell.cell(`value - 2`, {
+  cell.cell("value - 2", {
     padding: 10,
   });
 
-  cell.cell(`value - 3`, {
+  cell.cell("value - 3", {
     padding: 10,
   });
 
-  cell.cell(`value - 4`, {
+  cell.cell("value - 4", {
     padding: 10,
   });
 };

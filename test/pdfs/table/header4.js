@@ -15,18 +15,18 @@ module.exports = function (doc, { lorem }) {
   row1.cell(lorem.short, {
     fontSize: 15,
     padding: 10,
-    backgroundColor: 0xdddddd,
+    backgroundColor: 0xDDDDDD,
   });
-  row1.cell("Cell 2", { fontSize: 11, padding: 10, backgroundColor: 0xeeeeee });
+  row1.cell("Cell 2", { fontSize: 11, padding: 10, backgroundColor: 0xEEEEEE });
 
   const row2 = table.row();
 
   row2.cell(lorem.short, {
     fontSize: 15,
     padding: 10,
-    backgroundColor: 0xdddddd,
+    backgroundColor: 0xDDDDDD,
   });
-  row2.cell("Cell 2", { fontSize: 11, padding: 10, backgroundColor: 0xeeeeee });
+  row2.cell("Cell 2", { fontSize: 11, padding: 10, backgroundColor: 0xEEEEEE });
 
   doc.text("Foo");
 };

@@ -1,7 +1,7 @@
 const test = require("tape");
 const pdf = require("../../lib");
 
-test("table headers created in-between rows", function (t) {
+test("table headers created in-between rows", (t) => {
   const doc = new pdf.Document();
   const table = doc.table({ widths: [] });
   table.header();

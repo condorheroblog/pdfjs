@@ -2,7 +2,7 @@ module.exports = function (doc, { lorem }) {
   const table = doc.table({
     widths: [256, 256],
     borderWidth: 10,
-    borderColor: 0xe74c3c,
+    borderColor: 0xE74C3C,
   });
 
   const row = table.row();

@@ -12,8 +12,8 @@ module.exports = function (doc, { lorem }) {
 
   const row1 = table.row();
 
-  row1.cell("Cell 1", { fontSize: 11, padding: 10, backgroundColor: 0xdddddd });
-  row1.cell("Cell 2", { fontSize: 11, padding: 10, backgroundColor: 0xeeeeee });
+  row1.cell("Cell 1", { fontSize: 11, padding: 10, backgroundColor: 0xDDDDDD });
+  row1.cell("Cell 2", { fontSize: 11, padding: 10, backgroundColor: 0xEEEEEE });
 
   doc.text("Bar");
 };

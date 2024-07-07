@@ -12,10 +12,10 @@ module.exports = function (doc, { lorem }) {
 
   for (let i = 0; i < 2; ++i) {
     const row = table.row();
-    row.cell("Cell " + i);
+    row.cell(`Cell ${i}`);
     const cell = row.cell();
     for (let i = 0; i < 3; ++i) {
-      cell.text("text " + i);
+      cell.text(`text ${i}`);
     }
   }
 };

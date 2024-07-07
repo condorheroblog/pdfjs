@@ -1,6 +1,6 @@
 module.exports = function (doc, { lorem }) {
   const cell = doc.cell({
-    backgroundColor: 0xeeeeee,
+    backgroundColor: 0xEEEEEE,
     width: 250,
     padding: 10,
   });
@@ -8,7 +8,7 @@ module.exports = function (doc, { lorem }) {
   cell.text(lorem.shorter, { fontSize: 20 });
 
   const inner = cell.cell({
-    backgroundColor: 0xdddddd,
+    backgroundColor: 0xDDDDDD,
     padding: 10,
   });
 

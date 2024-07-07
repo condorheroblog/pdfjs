@@ -2,7 +2,7 @@ module.exports = function (doc, { lorem }) {
   doc.text(lorem.short);
 
   const cell = doc.cell({
-    backgroundColor: 0xeeeeee,
+    backgroundColor: 0xEEEEEE,
     padding: 10,
     width: 256,
     borderWidth: 1,

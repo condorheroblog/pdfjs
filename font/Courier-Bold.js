@@ -1,2 +1,2 @@
-const AFMFont = require('../lib/font/afm')
-module.exports = new AFMFont(require('./Courier-Bold.json'))
+const AFMFont = require("../lib/font/afm");
+module.exports = new AFMFont(require("./Courier-Bold.json"));

@@ -22,11 +22,11 @@ Add page numbers.
 **Examples:**
 
 ```js
-const footer = doc.footer()
-footer.pageNumber({ textAlign: 'center' })
+const footer = doc.footer();
+footer.pageNumber({ textAlign: "center" });
 ```
 
 ```js
-const header = doc.header()
-header.pageNumber((curr, total) => `${curr} / ${total}`)
+const header = doc.header();
+header.pageNumber((curr, total) => `${curr} / ${total}`);
 ```
